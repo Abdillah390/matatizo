@@ -34,6 +34,8 @@ CasesView = require './views/CasesView'
 EntomologyInvestigationsView = require './views/EntomologyInvestigationsView'
 EntomologySpecimensView = require './views/EntomologySpecimensView'
 EntomologyDashboardView = require './views/EntomologyDashboardView'
+gulaamView = require './views/gulaamView'
+TestView = require './views/TestView'
 
 
 # This allows us to create new instances of these dynamically based on the URL, for example:
@@ -59,7 +61,9 @@ reportViews = {
   "WeeklyFacilityReports": require './views/WeeklyFacilityReportsView'
   "CleaningReports": require './views/CleaningReportsView'
   "Weeklysummary": require './views/WeeklySummaryView'
-}
+  "gulaam": require './views/gulaamView'
+  "Test": require './views/TestView'
+} 
 
 activityViews = {
   Issues: require './views/IssuesView'
@@ -128,7 +132,10 @@ class Router extends Backbone.Router
     "entomology_investigations/*options": "entomologyInvestigations"
     "entomology_specimens": "entomologySpecimens"
     "entomology_specimens/*options": "entomologySpecimens"
+    "gulaam": "gulaam"
+    "Test": "Test"
     "*noMatch": "noMatch"
+    
 
   entomologyDashboard: (optionString) =>
     Coconut.entomologyDashboardView = new EntomologyDashboardView()

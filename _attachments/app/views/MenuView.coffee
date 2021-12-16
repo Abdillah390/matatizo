@@ -59,29 +59,48 @@ class MenuView extends Backbone.View
       <nav class='coconut_navigation mdl-navigation'>
         <a class='mdl-navigation__link drawer__subtitle' id='findCase' data-title='Dashboard' data-category='menuLink' href='#find/case'>
           <i class='mdl-color-magnify--blue-grey-400 mdi mdi-view-magnify mdi-24px'></i>
-          Find Case
+          UTAFUTAJI WA KESI
         </a>
+
+        <span class='mdl-navigation__link drawer__subtitle' id='activity-main' data-title='Data' data-category='menuHeader'>
+          <i class='mdl-color-text--blue-grey-400 mdi mdi-file-export mdi-24px'></i>
+           KILAZA
+        </span>
+        <div class='m-l-20 dropdown' id='drawer-activities'>
+        #{
+             activityLinks = {
+               cases: "jaribio"
+               individuals: "Mafunzo ya wiki"
+               
+             }
+             _(activityLinks).map (linkText, linkUrl) ->
+               "<a class='mdl-navigation__link activity__link' id = '#{linkUrl}' href='##{linkUrl}' data-title='Data'>#{linkText}</a>"
+             .join ""
+        }
+        </div>
 
 
         <a class='mdl-navigation__link drawer__subtitle' id='dashboard' data-title='Dashboard' data-category='menuLink' href='#dashboard'>
-          <i class='mdl-color-text--blue-grey-400 mdi mdi-view-dashboard mdi-24px'></i>Dashboard</a>
+          <i class='mdl-color-text--blue-grey-400 mdi mdi-view-dashboard mdi-24px'></i>DASHIBODI</a>
         <span class='mdl-navigation__link drawer__subtitle' id='report-main' data-title='Reports' data-category='menuHeader'>
           <i class='mdl-color-text--blue-grey-400 mdi mdi-file-document mdi-24px'></i>
-        Reports</span>
+       RIPOTI</span>
         <div class='m-l-20 dropdown' id='drawer-reports'>
         #{
           reportLinks = {
-            Analysis: "Analysis"
-            Fociclassification: "Foci Classification"
-            Usersreport: "How Long Are Investigations Taking?"
-            Casefollowup: "Case Follow-ups Status"
-            Compareweekly: "Compare Weekly Facility Reports With Case Follow-ups"
+            Analysis: "UCHAMBUZI ABDI"
+            Fociclassification: "Mgawanyiko wa Foci"
+            Usersreport: "kwa muda ganu umetumia kufanya uchunguzi?"
+            Casefollowup: "Hali ya ufuatiliaji wa kesi"
+            Compareweekly: "linganisha ripoti za vituo zilizofuatiliwa"
             Epidemicthreshold: "Epidemic Thresholds"
             #Systemerrors: "Errors Detected By System"
             #Periodtrends: "Period Trends Compared To Previous 3 Weeks"
             #Rainfallreport: "Rainfall Submission"
             WeeklyMeetingReport: "Morning Meeting Weekly Report"
-            WeeklyFacilityReports: "Weekly Facility Reports"
+            WeeklyFacilityReports: "ripoti ya vituo ya wiki"
+            gulaam: "gulaam"
+            Test: "Test"
             #Weeklysummary: "Weekly Trends Compared To Previous 3 Weeks"
           }
           _(reportLinks).map (linkText, linkUrl) ->
@@ -91,7 +110,7 @@ class MenuView extends Backbone.View
         </div>
         <span class='mdl-navigation__link drawer__subtitle' id='graphs-main' data-title='Graphs' data-category='menuHeader'>
           <i class='mdl-color-text--blue-grey-400 mdi mdi-file-chart mdi-24px'></i>
-            Graphs
+            MICHORO YANGU
         </span>
         <div class='m-l-20 dropdown' id='drawer-graphs'>
           #{
@@ -101,14 +120,14 @@ class MenuView extends Backbone.View
           }
         </div>
         <a class='mdl-navigation__link drawer__link' href='#maps' id='maps' data-title='Maps' data-category='menuLink'>
-          <i class='mdl-color-text--blue-grey-400 mdi mdi-map mdi-24px'></i>
-            <span class='link-title'>Maps</span>
+          <i class='mdl-color-text--green-400 mdi mdi-map mdi-24px'></i>
+            <span class='link-title'>MEPU</span>
         </a>
 
 
         <span class='mdl-navigation__link drawer__subtitle' id='activity-main' data-title='Data' data-category='menuHeader'>
           <i class='mdl-color-text--blue-grey-400 mdi mdi-file-export mdi-24px'></i>
-            Data
+            TAARIFA
         </span>
         <div class='m-l-20 dropdown' id='drawer-activities'>
         #{
@@ -125,7 +144,7 @@ class MenuView extends Backbone.View
 
         <span class='mdl-navigation__link drawer__subtitle' id='activity-main' data-title='Entomology' data-category='menuHeader'>
           <i class='mdl-color-text--blue-grey-400 mdi mdi-file-export mdi-24px'></i>
-            Entomology
+            ENTOOOOMBU WETU
         </span>
         <div class='m-l-20 dropdown' id='drawer-activities'>
         #{
@@ -146,7 +165,7 @@ class MenuView extends Backbone.View
 
         <span class='mdl-navigation__link drawer__subtitle' id='activity-main' data-title='Activities' data-category='menuHeader'>
           <i class='mdl-color-text--blue-grey-400 mdi mdi-ticket mdi-24px'></i>
-            Activities
+            SHUGULI ZA VILAZA
         </span>
         <div class='m-l-20 dropdown' id='drawer-activities'>
         #{

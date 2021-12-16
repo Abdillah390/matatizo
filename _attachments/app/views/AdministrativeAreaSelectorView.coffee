@@ -40,7 +40,7 @@ class AdministrativeAreaSelectorView extends Backbone.View
 
   render: => 
     @$el.html "
-      Administrative Area<br/>
+      ENEO LA UONGOZI<br/>
       <select id='administrativeLevel'>
         #{
           (for level in GeoHierarchy.levels

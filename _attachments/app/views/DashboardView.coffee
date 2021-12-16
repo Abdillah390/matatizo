@@ -37,7 +37,8 @@ class DashboardView extends Backbone.View
 
     Coconut.statistics = Coconut.statistics || {}
     # $('#analysis-spinner').show()
-    HTMLHelpers.ChangeTitle("Dashboard")
+    HTMLHelpers.ChangeTitle("SURA YA MFUMO DASHBODI
+    ")
     @$el.html "
         <style>
           .page-content {margin: 0}
